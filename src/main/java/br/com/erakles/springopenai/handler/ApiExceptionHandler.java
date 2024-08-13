@@ -19,7 +19,6 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<ApiError> handleGenericError(Exception ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body(new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage(), ex));
-
     }
 
 }
